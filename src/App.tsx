@@ -1,26 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Todos } from "./Components/Todos"
+import "tailwindcss/tailwind.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App h-screen flex  p-6 items-center justify-center flex-col bg-gradient-to-r from-green-100 to-blue-100">
+         <h1 className=" text-center mb-4  font-extrabold text-gray-600 font-4xl "> Todos</h1>
+     <Todos />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
