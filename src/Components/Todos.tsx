@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from "react"
 // import { v4 as uuidv4 } from "uuid"
 
-import { Row } from "./Row"
+import { Home } from "./Home"
 import { data } from "../todos"
 import { AddTodo } from "./AddTodo"
 import { Todo } from "../types"
@@ -44,9 +44,10 @@ export const Todos = () => {
 
   const handleSubmitTodo = (e: FormEvent) => {
     e.preventDefault()
+    let newid=todosLength+1;
 
     const todo = {
-      id: "101",
+      id: newid.toString(),
       task: task,
       isCompleted: false,
     }
@@ -63,7 +64,7 @@ export const Todos = () => {
       />
       <div className="h-10" />
       {todos.map((todo) => (
-        <Row
+        <Home
           key={todo.id}
           todo={todo}
           handleDeleteTodo={handleDeleteTodo}

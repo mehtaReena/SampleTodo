@@ -1,6 +1,6 @@
 import { TodoProps } from "../types"
 
-export const Row = ({
+export const Home = ({
   todo: { id, task, isCompleted },
   handleCheckTodo,
   handleDeleteTodo,
